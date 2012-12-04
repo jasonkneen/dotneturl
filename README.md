@@ -15,8 +15,10 @@ Call it like this:-
 
 	<%
 	Dim objXMLHTTP : Set objXMLHTTP = Server.CreateObject("Msxml2.ServerXMLHTTP.6.0")
-	objXMLHTTP.Open "GET", "/url.aspx?get=" & server.urlencode(url), False
+	objXMLHTTP.Open "GET", "/url.aspx?method=get&url=" & server.urlencode(url), False
 	%>
+	
+Change method=get or method=post accordingly.
 
 Ensure you encode the URL to allow you to pass a URL with multiple parameters.
 
