@@ -13,14 +13,14 @@ So, I implemented a very quick fix to use a proxy .NET page.
 
 Call it like this:-
 
-<%
-Dim objXMLHTTP : Set objXMLHTTP = Server.CreateObject("Msxml2.ServerXMLHTTP.6.0")
-objXMLHTTP.Open "GET", "/url.aspx?get=" & server.urlencode(url), False
-%>
+	<%
+	Dim objXMLHTTP : Set objXMLHTTP = Server.CreateObject("Msxml2.ServerXMLHTTP.6.0")
+	objXMLHTTP.Open "GET", "/url.aspx?get=" & server.urlencode(url), False
+	%>
 
 Ensure you encode the URL to allow you to pass a URL with multiple parameters.
 
-To "fix" the oAUTH library, edit the Send() function in cLibOAuth.asp to do the following:-
+To "fix" the oAUTH library, edit the *Send()* function in *cLibOAuth.asp* to do the following:-
 
 
 (put the url.aspx page in the site root)
