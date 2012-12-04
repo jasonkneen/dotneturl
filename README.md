@@ -31,7 +31,7 @@ Change
 
 To
 
-	objXMLHTTP.Open m_strRequestMethod, "/url.aspx?" & lcase(m_strRequestMethod) & "=" & server.urlencode(strRequestURL), False
+	objXMLHTTP.Open m_strRequestMethod, "http://YOURDOMAIN.COM/url.aspx?method=" & m_strRequestMethod & "&url=" & server.urlencode(strRequestURL), False
 
 
 Once you've done that, the library should work.
